@@ -1,0 +1,131 @@
+<!doctype html>
+<html manifest="demo_html.appcache" lang="en">
+<head>
+<title>Sign in</title>
+<meta charset ="utf-8">
+<meta name ="viewport" content ="width=device-width,intial-scale=1"/>
+<link rel = "stylesheet" type="text/css" href="Home.css"/>
+<script src="signup.js"></script>
+<style type="text/css">
+#main{
+margin:10px;
+padding:10px;
+border:1px solid white;
+background:rgba(100,5,21,.6);
+width:50%;
+font-family:Verdana,Arial,Helvetica;
+}
+
+.html{
+position:absolute;
+display:none;
+top:75%;
+left:80%;
+width:200px;
+height:150px;
+border:1px solid white;
+
+}
+
+
+#b1{
+position:absolute;
+left:80%;
+top:70%;
+
+}
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="jquery-3.2.1.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#main").fadeToggle("slow");
+    });
+	
+	$("#b1").click(function(){
+        $(".html").slideToggle("slow");
+    });
+	$("input").focus(function(){
+    $(this).css("background-color", "rgb(188,7,28)");
+	
+  });
+  $("input").blur(function(){
+    $(this).css("background-color","white");
+  });
+	
+});
+    
+
+</script>
+
+
+</head>
+<body onload="document.form1.name.focus()">
+<div id="main">
+<form action="" name="form1" id="f1" onsubmit="return validateAll();">
+<fieldset>
+<legend>Sign Up</legend>
+<p>
+<label>Name:</label><br />
+<input type="text" id="n1" name ="name" />
+</p>
+<p><label>Emai/Adress:</label><br />
+<input type = "text" id="em" name="email"/>
+</p><p><label for="password">Password:</label><br />
+<input type="password" name = "pass" id= "pw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"/>
+</p>
+<p>Encrypt:<keygen name="name" challenge="challenge string" keytype="type"><br />
+</p>
+<p>Country:<br />
+<select name="country">  
+<option selected="" value="Default"> </option>  
+<option value="AL">Albania</option>  
+<option value="KS">Kosovo</option>  
+<option value="US">USA</option>  
+<option value="RS">Russia</option>  
+<option value="TR">Turkey</option>  
+</select>  
+</p>
+<p><label>Birthday:</label><br />
+<input type ="date" id="b" name="birthday" />
+</p class="container">
+<p><label>Sex:</label><br />
+<input type="radio"  name="gender" id="ma" value="Male"/>Male
+<input type="radio"  name="gender" id="fe" value="Female" />Female
+<br />
+</p>
+<p>
+<input type="submit" name="Sign Up" id="su" value="Sign Up">
+</p>
+<div id="click">
+<a href="#" onclick="clickCounter()" >How Many Times I clicked Here</a>
+</div>
+</div>
+</fieldset>
+</form>
+
+
+<button>Fade</button><br><br>
+
+
+
+
+
+
+<pre><code class="html">
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;title&gt;&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!--Code Sample!--&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<input type="button" name="b1" id="b1" value="Show Some Code">
+
+</body>
+</html>

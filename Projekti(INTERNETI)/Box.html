@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang = "en" manifest="demo_html.appcache">
+<head>
+<title>Box Office</title>
+<meta charset="utf-8"/>
+<meta name ="viewport" content ="width=device-width,intial-scale=1"/>
+<link rel="stylesheet" type="text/css" href="box.css"/>
+<script src="jquery-3.2.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="jquery-ui.js"></script>
+  <script>
+  $( function() {
+    var state = true;
+    $( "#intro" ).on( "click", function() {
+      if ( state ) {
+        $( "#intro" ).animate({
+          backgroundColor: "#aa0000",
+          color: "#fff",
+          width: 500
+        }, 1000 );
+      } else {
+        $( "#intro" ).animate({
+          backgroundColor: "#fff",
+          color: "red",
+          width: 240
+        }, 1000 );
+      }
+      state = !state;
+    });
+  } );
+  </script>
+<script>
+         var worker = new Worker('bigLoop.js');
+         
+         worker.onmessage = function (event) {
+            alert("Completed " + event.data + "iterations" );
+         };
+         
+         worker.onerror = function (event) {
+            console.log(event.message, event);
+         };
+         
+         function sayHello(){
+            alert("Hello" );
+         }
+      </script>
+
+<style>
+    .toggler 
+	{ width: 500px;
+	height: 150px;
+	position: relative;
+	}
+	
+    #button {
+	padding:3px;
+	height:20px;
+	text-decoration: none;
+	}
+	.game{
+	position:absolute;
+	top:40%;
+	left:87%;
+	
+	}
+	#worker{
+	position:absolute;
+	left:89%;
+	top:2%;
+	}
+
+	#d1{
+	background-color:rgba(133,133,133,.5);
+	}
+   
+  </style>
+  
+</head>
+
+<body>
+    <header>
+    <nav class="navbar">
+    <ul>
+	  <li><a href="index.html">Home</a></li>
+	  <li><a href="Categories.html">Categories</a></li>
+      <li><a href="History.html">History</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+	  <li><a href="Box.html">Box-Office</a></li>
+    </ul>
+	</nav>
+	</header>
+    <br />
+    <hr />
+	
+    <div id="main">
+	<article id="intro">
+	Horror movies always gathered audiences in cinemas all over the world , 
+	but 2017 has already become the biggest box office year ever for horror. 
+	Scary movies have collected <mark>$733 million</mark> in ticket sales, according to the website <a href="http://www.boxofficemojo.com/">Box Office Mojo</a>. 
+	The runaway success of “It” (more than<mark> $300 million</mark> and counting) and “Get Out” ($175 million) led the way, but October is a golden month for horror and will surely add more to that tally. “Happy Death Day” was No. 1 when it opened this month (on Friday the 13th), and a new entry 
+	in the hit “Saw” franchise, “Jigsaw” (due Oct. 27), should also raise the total.
+	This Chart contains the top 20 Horror movies based on the 
+	cumulative worldwide box office.
+	<div class="toggler">
+	</div>
+	</article>
+	
+	
+	 <div id="ch" class="chart">
+       <table border="1"  cellspacing="2">
+     <tr>
+      <td>
+       <h3 style="text-align:center; text-decoration:underline;
+              color:white;">Movie</h3>
+       <ol class="movie">
+     <li>It(2017)</li>
+     <li>I am Legend(2007)</li>
+     <li>Jaws(1973)</li>
+     <li>The Exorcist(1973)</li>
+     <li>Hannibal(2001)</li>
+     <li>The Conjuring(2013)</li>
+     <li>The Conjuring 2:The enfield Poltergeist(2016)</li>
+     <li>Annabelle:Creation(2017)</li>
+     <li>Split(2017)</li>
+     <li>Annabelle(2014)</li>
+     <li>Get out(2017)</li>
+     <li>The Blair Witch Project(1999)</li>
+     <li>The Ring(2002)</li>
+     <li>Alien:Covenant(2017)</li>
+     <li>Interview With The Vampire:The Vampire Chronicles(1994)</li>
+     <li>Bram Stroker's Dracula(1992)</li>
+     <li>Jaws 2(1978)</li>
+     <li>The Others(2001)</li>
+      <li>Alien(1979)</li> 
+     <li>Paranormal Acticity 3(2011)</li>
+   </ol>
+  </td>
+
+  <td>
+   <h3 style="text-align:center; text-decoration:underline;
+              color:white;">WorldWide Box Office</h3>
+    <ul class="boxoffice" id="mylist">
+     <li>$<span class="total">697,581,748</span></li>
+     <li>$<span class="total">585,532,684</span></li>
+     <li>$<span class="total">470,700,000</span></li>
+     <li>$<span class="total">350,100,280</span></li>
+     <li>$<span class="total">318,000,141</span></li>
+     <li>$<span class="total">311,270,008</span></li>
+     <li>$<span class="total">305,492,201</span></li>
+     <li>$<span class="total">295,874,190</span></li>
+     <li>$<span class="total">278,449,984</span></li>
+     <li>$<span class="total">256,862,920</span></li>
+     <li>$<span class="total">254,361,709</span></li>
+     <li>$<span class="total">248,300,000</span></li>
+     <li>$<span class="total">238,862,031</span></li>
+     <li>$<span class="total">223,564,608</span></li>
+     <li>$<span class="total">215,862,692</span></li>
+     <li>$<span class="total">208,900,376</span></li>
+     <li>$<span class="total">207,765,056</span></li>
+     <li>$<span class="total">207,068,340</span></li>
+     <li>$<span class="total">203,630,630</span></li>
+     <li>$<span class="total">202,053,386</span></li>
+   </ul>
+  </td>
+ </tr>
+ <tr><td><input type="button" onclick="return summ();" id="tot" value="Show Total Amount OF Box Office"/></td>
+</table>
+      </div>
+	  <div class="mydiv">
+In 2017 these strong genre performers delivered
+ a rebound year for horror films.
+ But with no new ones at their level yet to open, figure 2017 ends up with 
+ around $800 million for these and the rest, maybe around 7. 5 per cent of 
+ the year’s total. 
+ That would make it the strongest year with adjusting grosses
+ since 2004, which totaled about $870 million with “Van Helsing,”
+ “The Village,” and “The Grudge” leading the way.
+ 
+ <input type="button" id="b2" onclick="chan()"  value="Change">
+</div>
+
+	  <div id="d1">
+     <p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Show Location(Latitude and Longitude)</button>
+
+<p id="demo"></p>
+</div>
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by your browser!";
+    }
+}
+
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+        
+		
+		<br>
+		<br>
+        <input type="button" id="worker" onclick="sayHello();" value="Say Hello"/>
+      
+
+		
+ 	
+    </div>
+
+<script type="text/javascript">
+var currentTime = new Date().getHours();
+if (7 <= currentTime && currentTime < 20) {
+    if (document.body) {
+        document.body.background = "images/creep.jpg";
+    }
+}
+else {
+    if (document.body) {
+        document.body.background = "images/v.jpg";
+    }
+}
+
+</script>
+
+
+<script>
+
+function chan(){
+var nn = document.getElementsByClassName("mydiv");
+
+var i =0;
+while(nn[i]){
+nn[i].style.color="yellow";
+i++;
+}
+
+
+}
+
+function summ(){
+// Select all child Elements in the UL.
+const totals = document.querySelectorAll('.total');
+
+var total = 0;
+
+for(let i = 0; i < totals.length; i++){
+	let x = totals[i].textContent.split(',').join('');
+  x = Number(x);
+  total += x;
+}
+alert('Total amount of Box Office : ' + total + '$');
+ }
+
+
+</script>
+
+<div class="game"><a href="game.html" >To the Game</a>
+</div>
+
+
+	<footer>
+	&copy;  <br>horror-movies.com
+	
+	</footer>
+</body>
+</html>

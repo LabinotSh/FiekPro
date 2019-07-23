@@ -1,0 +1,136 @@
+body{	
+	padding:0px;
+	margin:0px;
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+.navbar { 
+        margin-bottom:20px;
+        width:100%;
+        height:50px;
+        float:right; 
+		 }
+
+#button{
+margin:20px;
+padding:10px;
+
+
+}
+
+
+#worker{
+	position:absolute;
+	top:40%;
+	left:80%;
+	border:1px solid black;
+	color:black;
+	width:auto;
+	margin:10px;
+	padding:10px;
+	
+	
+}	
+
+#d1{
+	position:absolute;
+	top:10%;
+	left:78%;
+	width:auto;
+	height:150px;
+	margin:10px;
+	padding:10px;
+	border:1px solid black;
+}
+.navbar ul li {
+	float:left;
+	width:200px;
+	height:50px;
+	resize:none;
+	background-color:black;
+	opacity:.9;
+	line-height:50px;
+	text-align:center;
+	text-transform:capitalize;
+	font-size:25px;
+}	  
+
+.navbar ul li a {
+	text-decoration:none;
+	color:rgb(183,5,21);
+	display:block;
+	
+}
+ .navbar ul li a:hover {
+	 color:white;
+}
+
+#main{
+     margin-top:30px;
+     border:1px transparent white;
+	color:rgb(183,5,21);
+	width:90%;
+	margin-left:60px;
+   
+
+}
+
+table{
+background-color:rgba(14,14,15,.7);
+}
+.movie{
+font-size:20px;
+line-height:30px;
+color:white;
+text-shadow:1px 1px purple;
+background-color:rgba(14,14,15,.5);
+}
+.boxoffice{
+font-size:20px;
+line-height:30px;
+color:white;
+text-shadow:1px 1px purple;
+background-color:rgba(14,14,15,.5);
+}
+
+.boxoffice{
+list-style-type:none;
+}
+.mydiv{ 
+            margin-top:10px;
+			margin-bottom:10px;
+            padding:12px; 
+            border:2px solid white; 
+            width:50%; 
+            height:105px;
+			color:white;
+			text-shadow:1px 1px purple;
+			font-size:17px;
+         }
+
+#intro{
+	margin:10px;
+	width:50%;
+    position:relative;
+	padding:10px;
+	border:1px solid white;
+    background-color:rgba(70,44,54,.8);
+    color:white;
+}
+
+
+footer{
+	width:auto;
+	height:50px;
+	font-style:myFont,serif;
+	font-size:19px;
+	font-style:oblique;
+	text-align:center;
+	border:1px solid black;
+	color:white;
+	text-shadow:1px 1px blue;
+	background-color:rgba(66,66,66,.6);
+	
+}

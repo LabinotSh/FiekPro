@@ -1,0 +1,189 @@
+<!doctype html>
+<html manifest="demo_html.appcache" lang="en">
+<head>
+<title>Contact</title>
+<meta charset="utf-8"/>
+<meta name ="viewport" content ="width=device-width,intial-scale=1"/>
+<link rel="stylesheet" type="text/css" href="contact.css"/>  
+
+<script>
+
+function validate(){
+var na=document.ContactForm.name;
+var em=document.ContactForm.email;
+var ph=document.ContactForm.phone;
+var ad=document.ContactForm.address;
+var co=document.ContactForm.country;
+var mess=document.ContactForm.message;
+
+
+
+if(na.value==""){
+window.alert("Write You Full Name");
+na.focus();
+return false;
+}
+if(em.value==""){
+window.alert("Write You Email");
+em.focus();
+return false;
+}
+if(myFunction()){
+return true;
+}
+if(ad.value==""){
+window.alert("Write You Address");
+ad.focus();
+return false;
+}
+if(co.value==""){
+window.alert("Write Your Country");
+co.focus();
+return false;
+}
+if(mess.value==""){
+window.alert("Please Send Us A Message");
+mes.focus();
+return false;
+}
+
+
+}
+
+
+function myFunction() {
+    var  x;
+    x = document.getElementById("ph").value;
+    try { 
+        if(x == "")  throw  "is Empty";
+        if(isNaN(x)) throw  "not a number";
+    }
+    catch(err) {
+        alert("Telephone(Field) " + err);
+    }
+
+}
+
+
+
+
+</script>
+</head>
+
+
+<body>
+    <nav>
+    <ul>
+	  <li><a href="index.html">Home</a></li>
+	  <li><a href="Categories.html">Categories</a></li>
+      <li><a href="History.html">History</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+	  <li><a href="Box.html">Box-Office</a></li>
+    </ul>
+   </nav>	
+	<br />
+	<table cellspacing="10" cellpadding="10" width="600">
+	<tr><td>
+<canvas id="hCanvas"></td>
+<td><div>
+<img src="images/co.jpg" alt="contact" width="200" />
+</div></td></tr>
+</table>
+
+</canvas>
+<script>
+var c = document.getElementById("hCanvas");
+var ct= c.getContext("2d");
+ct.font="38px Verdana";
+var gradient = ct.createLinearGradient(10,10,c.width,0);
+gradient.addColorStop("0.5","rgb(164,62,82)");
+gradient.addColorStop("0","red");
+gradient.addColorStop("1.0","white");
+ct.fillStyle=gradient;
+ct.fillText("Contact Us !",30,80);
+
+</script>
+<br />
+<form id="contact" autocomplete="off" name="ContactForm" onsubmit="return validate();" >
+<fieldset>
+<!--javascript events -->
+<legend onmouseover="this.style.color='white'" onmouseout="this.style.color='red'">Contact</legend>
+<p>
+<label>Your Name and Last Name:</label><br />
+<input type ="text" name="name" id="n" placeholder="enter your name"/><br />
+</p>
+<p>
+<label>E-mail:</label><br />
+<input type="text" name="email" id="em" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"><br />
+</p>
+<p>
+<label>Telephone:</label><br />
+<input type="text" name="phone"  id="ph" /><br />
+</p>
+<p>
+<label>Address:</label><br />
+<input type="text" name="address" id="a1"/><br />
+</p>
+<p>
+<label>Country:</label><br />
+<input type="text" name="country" id="co" /><br />
+</p>
+<p><label>Your Message:</label><br />
+<textarea name="message" id="m" rows="4" cols="50">
+</textarea><br />
+</p>
+<p>
+<input type="submit" id="button" name="send" value="Submit"/>
+<input type="reset" id="button" name="reset" value="Reset"/>
+</p>
+</fieldset>
+</form>
+<audio controls id="audio">
+<source src="audios/horror.mp3" type="audio/mp3">
+</audio>
+
+<footer id="foot">
+<table cellspacing="5" cellpadding="5">
+<tr><td><svg width="150" height="100">
+<circle cx="50" cy="50" r="30" stroke="black" stroke-width="3" fill="white"/>
+</svg>
+<td><svg width="150" height="100"align="center">
+    <circle cx="30" cy="30" r="15" stroke="black" stroke-width="3" fill="white"/>
+	</svg>
+	<svg width="150" height="100"align="center">
+    <circle cx="30" cy="30" r="15" stroke="black" stroke-width="3" fill="white"/>
+	</svg>
+        <td><address>
+		&copy;<br> By <a href="mailto:willsherifi@gmail.com">Labinot Sherifi.</a><br />
+		Prishtina <br />
+		Kosovo<br />
+		</address></td>
+		<td><svg width="150" height="100"align="center">
+    <circle cx="30" cy="30" r="15" stroke="black" stroke-width="3" fill="white"/>
+	</svg>
+	<svg width="150" height="100"align="center">
+    <circle cx="30" cy="30" r="15" stroke="black" stroke-width="3" fill="white"/>
+	</svg>
+	<td><svg width="150" height="100">
+<circle cx="50" cy="50" r="30" stroke="black" stroke-width="3" fill="white"/>
+</svg></td>
+</tr>
+</table>
+<button  id="b" onclick="myf()">Replace</button>
+
+</footer>
+
+<script>
+function myf(){
+ var x=document.getElementById("foot").innerHTML;
+ var pat=new RegExp("Prishtina");
+ if(pat.exec(x)){
+ var ser = x.replace(/Prishtina/i,"Gjilan");
+ document.getElementById("foot").innerHTML=ser;
+ }
+}
+
+ </script>
+
+</body>
+</html>
