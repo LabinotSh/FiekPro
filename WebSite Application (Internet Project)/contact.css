@@ -1,0 +1,163 @@
+body{
+	background:url(images/v.jpg);
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+    background-size:cover;
+	padding:0px;
+	margin:0px;
+	
+}
+
+
+ul{
+	margin:10px;
+	padding:5px;
+	list-style:circle;
+}
+
+
+ul li {
+	float:left;
+	width:200px;
+	height:50px;
+	background-color:black;
+	opacity:.9;
+	line-height:50px;
+	text-align:center;
+	font-size:25px;
+}	  
+
+ul li a {
+	text-decoration:none;
+	color:rgb(183,4,8);
+	display:block;
+	
+}
+ul li a {
+	text-decoration:none;
+	color:rgb(183,4,8);
+	display:block;
+	
+}
+
+ul li a:hover {
+	 color:white;
+}
+
+#time{
+	
+	positon:absolute;
+	width:100px;
+	top:10%;
+	left:80%;
+}
+
+canvas{
+	margin:10px;
+	padding:10px;
+	width:200px;
+	height:100px;
+	margin-left:70px;
+	border:2px solid black;
+	-webkit-border-radius:20%;
+	background-color:rgb(205,205,205);
+	transform: perspective(500px) rotateY(30deg);
+}
+div{
+	animation-duration:4s;
+	animation-name:slide;
+	
+	
+}
+
+@keyframes slide{
+	from{
+		margin-left:100%;
+		width:300%;
+		
+	}
+	
+	to{
+		margin-left:0%;
+		width:50%;
+		
+		
+	}
+	
+}
+
+form{
+	width:62%;
+	margin-left:50px;
+	border:2px solid rgb(183,5,21);
+	-webkit-border-radius:10%;
+	background-image:url(images/hallow.jpg),url(images/scary1.jpg);
+	background-position:right bottom,left top;
+	background-repeat:no-repeat, repeat;
+	opacity:0.9;
+}
+
+form fieldset{
+	padding:10px;
+	margin:10px;
+	width:65%;
+	border:1px solid black;
+}
+form fieldset legend{
+	color:rgb(184,3,7);
+	font-size:20px;
+}
+form label{
+	color:rgb(185,3,9);
+}
+form input{
+	height:20px;
+	background-color:white;
+	border:1px solid rgb(185,3,9);
+	border-radius:15%;
+}
+form textarea {
+	background-color:white;
+	border:1px solid rgb(185,3,9);
+	border-radius:15%;
+}
+#button{
+	  background-color:rgb(183,5,7);
+	  color:black;
+	  height:38px;
+	  border:1px;
+	  border-radius:30%;
+	  padding-left:20px;
+	  padding-right:20px;
+	
+	
+}
+@font-face{
+font-family:myFont;
+src:url(Hattori_Hanzo.otf);
+}
+
+
+#foot{
+    margin:0px;
+	padding:20px;
+	margin-top:10px;
+	border:2px solid hidden;
+	background-color:rgba(0,0,0,.8);
+	text-align:center;
+	font-style:myFont;
+	color:white;
+	font-style:arial;
+	font-family:myFont;
+}
+
+#b{
+	position:absolute;
+	left:40%;
+	top:145%;
+}
+	
+#audio{
+	margin-left:80px;
+	
+}

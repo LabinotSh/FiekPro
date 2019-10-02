@@ -1,0 +1,166 @@
+body {
+    background:url(images/p.jpg);
+    background-size:cover;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:center;
+    font-family:arial;
+    color:white;
+}
+
+img {
+	border-radius:40%;
+}
+
+ul {
+	margin:0px;
+	padding:0px;
+	list-style-type:none;
+}
+
+.b{
+	position:absolute;
+	top:84%;
+	left:10%;
+	width:10%;
+	
+	
+}
+#navbar { 
+        width:1000px;
+        height:50px;
+        float:right; 
+		 }
+
+#logo {
+	width:200px;
+	height:50px;
+	float:left;
+}		 
+	  
+ul li {
+	float:left;
+	width:200px;
+	height:50px;
+	background-color:rgb(22,22,22);
+	opacity:.7;
+	line-height:50px;
+	text-align:center;
+	font-size:25px;
+	text-transform:capitalize;
+}	  
+
+ul li a {
+	text-decoration:none;
+	color:rgb(183,4,8);
+	display:block;
+	
+}
+
+ul li a:hover {
+	 color:white;
+	 
+}
+#time{
+	width:200px;
+	position:absolute;
+	top:90%;
+	left:80%;
+	box-sizing:box-border;
+	background-color:rgba(0,0,0,.7);
+	
+	
+	
+}
+.start{
+	border:2px solid white;
+	margin:20px;
+	padding:20px;
+	margin-top:50px;
+	width:60%;
+	float:right;
+	background-color:rgba(30,0,0,0.8);
+
+	
+}
+.start dl dt{
+	margin:5px;
+	padding:10px;
+	color:white;
+}
+.start dl dd{
+	color:rgb(183,5,21);
+	margin:5px;
+}
+
+.content{
+	padding:20px;
+	margin:10px;
+	
+	
+	
+}
+.loginBox {
+	position:absolute;
+	top:30%;
+	left:1%;
+	padding:80px 40px;
+	width:350px;
+	height:420px;
+	box-sizing:border-box;
+	background-color:rgba(0,0,0,.7);
+
+}
+
+h2 {
+	margin:0;
+	padding:0 0 20px;
+	color:rgb(183,5,21);
+	text-align:center;
+}
+.loginBox div{
+	margin:10px;
+	font-weight:bold;
+	color:#fff;
+}
+.textInput{
+	
+	margin-top:2px;
+	height:28px;
+	border:1px solid #5E6E66;
+	font-size:16px;
+	padding:1px;
+	width:100%;
+	
+}
+
+.val{
+	font-size:13px;
+	color:white;
+	
+	
+}
+.button1 {
+	  height:38px;
+	  background:rgb(183,5,21);
+	  border:0;
+	  padding-left:20px;
+	  padding-right:20px;
+}
+.textinput {
+	color:rgb(185,6,25);
+}
+
+	
+#click{
+	
+	position:absolute;
+	left:76%;
+	top:65%;
+	color:white;
+	font-family:serif,Times;
+	font-style:oblique;
+	
+	
+	
+}

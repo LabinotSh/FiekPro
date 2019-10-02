@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html manifest="demo_html.appcache"  lang ="en">
+<head>
+<title>Horror Movies-HomePage</title>
+<meta name ="viewport" content ="width=device-width,intial-scale=1"/>
+<meta charset = "utf-8"/>
+<link rel = "stylesheet" type="text/css" href="Home.css"/>
+<script src="jquery-3.2.1.min.js"></script>
+      </script>
+		
+      <script type = "text/javascript">
+         $(document).ready(function() {
+
+            $("#show").click(function () {
+               $(".loginBox").show( 1000 );
+            });
+
+            $("#hide").click(function () {
+               $(".loginBox").hide( 1000 );
+            });
+				
+         });
+      </script>
+<script>
+function clickC() {
+    if(typeof(Storage) !== "undefined") {
+        if (sessionStorage.clickcount) {
+            sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+        } else {
+            sessionStorage.clickcount = 1;
+        }
+        document.getElementById("click").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
+    } else {
+        document.getElementById("click").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+</script>
+
+</head>
+<body>
+  <header>
+    <div>
+	
+	</div>
+	<div id="logo">
+	<img src="images/horror.jpg"/>
+	</div>
+	<nav>
+	<ul id="navbar">
+	  <li><a href="index.html">home</a></li>
+	  <li><a href="Categories.html">categories</a></li>
+      <li><a href="History.html">history</a></li>
+      <li><a href="Contact.html">contact</a></li>
+	  <li><a href="Box.html">Box-Office</a></li>
+    </ul>
+    </nav>	
+    </div>	
+	</header>
+	<div id="time">
+	<button onclick="displayDate(); clickC();">The time:</button>
+
+    <script>
+	
+     function displayDate() {
+
+     document.getElementById("time").innerHTML = Date();
+     
+      }
+
+     </script>
+	</div>
+	<div class="start">
+	<dl>
+	<dt>
+	<cite>“Alone. Yes, that's the key word, the most awful word in 
+	the English tongue. Murder doesn't hold a candle to it and
+	hell is only a poor synonym.”</cite></dt> 
+    <dd> Stephen King</dd>
+	<dt><cite>“[Horror fiction] shows us that the control we believe we have is 
+	purely illusory,
+	and that every moment we teeter on chaos and oblivion.”</cite></dt>
+    <dd>Clive Barker</dd>
+    </dl>	
+	<audio controls>
+	<source src="audios/leave.mp3" type="audio/mp3">
+	</audio>
+	</div>
+	<div id = "click"></div>
+<script>
+window.onload=function(){
+var greet = ['Welcome To Our Website','Enjoy..'];
+var i =0;
+
+while(greet[i]){
+alert(greet[i]);
+i++;
+}
+}
+</script>
+
+<div class="loginBox">
+<h2>Log In</h2>
+<form name="myForm" autocomplete="on" onsubmit="return validate();" id="f" action="" method="post">
+<div>
+<label class="textinput">Email/Adress:</label>
+<input type="text" name = "Email" id="em"  class="textInput" placeholder="Enter Email"/><br />
+<div id="emailerr" class="val"></div>
+</div>
+<div>
+<label for = "password" class="textinput" >Password:</label><br />
+<input type ="password" id="pw" name = "password" class="textInput" pattern=".{7}" title="Seven or more characters" placeholder="*******"/><br />
+<div id="pwerror" class="val"></div>
+</div>
+<div>
+<input type="submit" value="Sign In" class="button1" name="signin"/>
+</div>
+<p><a href="signup.html">
+Create Account?
+</a></p>
+</form>
+
+</div>
+
+<p class="b">
+<input id="hide"  type="button" value="Hide" />
+<input id="show"  type="button" value="Show" />
+	</p>
+
+<script>
+var email=document.forms["myForm"]["Email"];
+var pw=document.forms["myForm"]["password"];
+
+
+var email_error=document.getElementById("emailerr");
+var pw_error=document.getElementById("pwerror");
+
+email.addEventListener("blur",emailVerify,true);
+pw.addEventListener("blur",pwVerify,true);
+
+
+function validate(){
+if(email.value==""){
+   email.style.border="1px solid red";
+   email_error.textContent="Email Is Required";
+   email.focus();
+   return false;
+}
+
+if(pw.value==""){
+   pw.style.border="1px solid red";
+   pw_error.textContent="Password Is Required";
+   pw.focus();
+   return false;
+
+}
+}
+//event handler functions
+function emailVerify(){
+  if(email.value != ""){
+     email.style.border="1px solid #5E6E66;";
+	 emailerr.innerHTML="";
+	 return true;
+
+  }
+}
+
+function pwVerify(){
+  if(pw.value != ""){
+     pw.style.border="1px solid #5E6E66;";
+	 pw_error.innerHTML="";
+	 return true;
+  }
+}
+
+
+</script>
+
+
+</body>
+
+</html>

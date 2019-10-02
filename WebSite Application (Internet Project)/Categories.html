@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html manifest="demo_html.appcache" lang="en">
+<head>
+<title>Categories</title>
+<meta charset="utf-8">
+<meta name ="viewport" content ="width=device-width,intial-scale=1"/>
+<link rel ="stylesheet" type="text/css" href="category.css"/> 
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+ 
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
+<script type="text/javascript">
+		
+    function valid(){
+	
+      var group = document.getElementsByTagName('input');
+	  
+       for (var i=0; i<group.length; i++) {
+	       if(group[i].type=='checkbox')
+		    {
+			  if(group[i].checked){
+			  return true;
+			  }
+			}
+	     }
+		 return false;
+	  
+	  }
+	  
+	  
+	
+	function Validate(){
+	
+	var v=document.f.movies.value;
+	if(!valid()){
+	alert("Please Pick One Subgenre!");
+	return false;
+	}if(v==""){
+	
+	alert(" Please Pick A Movie!");
+	return false;
+	}
+	alert("Congrats! Form Completed!");
+	return true;
+	}
+	
+</script>
+
+</head>
+
+<body>
+<div class="navbar">
+<nav>
+ <ul>
+	  <li><a href="index.html">Home</a></li>
+	  <li><a href="Categories.html">Categories</a></li>
+      <li><a href="History.html">History</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+	  <li><a href="Box.html">Box-Office</a></li>
+    </ul>
+	</nav>
+	</div>
+	<div id="h1">
+     <h1> Categories Of Horror </h1>
+    </div> 
+	<div id="header">
+
+<h4><pre>There are 33 subcategories in total
+         This diagram might give a more detailed look of 
+	      all <mark>Subgenres </mark> of Horror Movies.</pre>
+         
+		  </div>
+
+		  <div id ="main">
+		  <div id="diagram">
+		  <p>
+		  <img src = "images/genres.jpg" height="350px" alt="Genres of horror" title="Genres" usemap="#horrormap"/>
+		  <map name="horrormap">
+		  <area shape="rect" coords="290,50,20,45" alt ="killer" href="#killer">
+		  <area shape="rect" coords="340,50,20,45" alt ="monster" href="#monster">
+		  <area shape="rect" coords="600,50,20,45" alt ="para" href="#para">
+
+
+		  </map>
+		  </p>
+	<p>
+    There are 4 main horror areas:<span id="hgh">Killers; Monsters; Paranormal; Psychological;</span><br />
+    To this, we add 2 subgenres that are so popular that they can be considered as proper genre:<span id="hgh">Zombies</span> and <span id="hgh">Gore/Splatter</span>	
+	</p>
+	</div>
+	<a name="killer">
+	<div id="slasher" onclick="return show();">
+	<h2>SLASHER/KILLER</h2>
+	<img src="images/slasher.jpg" alt="slasher" title="slasher" height="300px"/>
+	 <article>Probably the most famous horror genre.<br />
+	 This genre features a killer,natural or supernatural ,usually<br />
+	 a psycopath , which for some reasons decimates people.This genre mixes thriller,crime and psychological thriller<br />
+	 </article>
+	 <p>
+	 <h2>CLASSIC SLASHER</h2>
+	 
+	 <p>
+	 Basic slashers have existed for a long time but became really popular in early 80's<br />
+	 with the succes of movies like <strong>Halloween</strong> and <strong>Friday the 13th</strong>
+	 </p>
+	 
+	
+	
+      <ul>
+       <li>Slasher
+        <ul>
+		  <li>Classic Slasher
+		    <ul>
+			 <li>Halloween(1978)</li>
+			 <li>Friday the 13th(1980)</li>
+			 <li>A nightmare on Elm Street(1984)</li>
+			 <li>Scream(1996)</li>
+			</ul>
+		  </li>
+		  </ul>
+		 </li>
+        </ul>
+		
+		<span id="great"> Drag and Drop This Picture </span>
+        <table cellspacing="4" cellpadding="3">		
+		<tr><td><div id="drag" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <img src="images/scream1.jpg" alt="scream" title="scream" height="240" width="320"
+	       draggable="true" ondragstart="drag(event)" id="dr"/>
+	  </div></td>
+	  <td><div id="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+	  </div></td></tr>
+	  </table>
+	  <p>
+	  <div id="vidslasher">
+	  The trailer to Scream(1996)<br />
+	  <video controls>
+	  <source src="videos/scream.mp4" type="video/mp4">
+	  <source src="videos/scream.ogg" type="video/ogg">
+	  </video>
+	  </div>
+	
+	  
+	  <section id="r">	  
+	  <h3>BUMPKIN AND REDNECK</h3>
+Created with early movies such as 2000 Maniacs (1964) or Deliverance (1972), this unofficial sub-genre plays on the myth that backwoods and remote countryside are populated with inbred freaks and maniacs.<br />
+ The sub-genre, which became famous with the success of Texas Chain Saw Massacre. often features families or clans of crazies, and often treat of cannibalism.  
+		  <ul>
+		  <li>Texas Chain Saw Massacre(1974)</li>
+		  <li>Hills Have Eyes(1977)</li>
+		  <li>Wrong Turn(2003)</li>
+		  <li>Wolf Creek(2005)</li>
+		  </ul>
+	
+		  </section>
+		  </p>
+		  
+		  <p>
+		  <div id="invasion">
+		  <h3>HOME INVASION AND SURVIVAL</h3>
+          <article>
+           Initiated by the oppressive atmosphere of earlier films such as Scream or Funny Games, the home invasion became a genre in itself only quite recently.<br />
+           The sub-genre is now getting increasingly popular. The<br />
+            assailants are often masked, or not shown at all, which reinforce the almost claustrophobic fear induced by these films.
+			</article>
+			<ul>
+			<li>Them(2006)</li>
+			<li>Inside(2007)</li>
+			<li>The Strangers(2008)</li>
+			<li>You are Next(2013)</li>
+		    </ul>
+			<img src="images/strangers.jpg" alt="strangers" title="strangers"/>
+			</div>
+			</p>
+			</div>
+			
+			<a name="monster">
+			<div id="Monsters">
+			<h2>MONSTERS/CREATURES</h2>
+			Existing from the early 1910’s with the first versions of Frankenstein or King Kong, the monster genre is “the” classic of horror. It is also the more<br />
+			diverse and widespread horror genre, so let’s look directly at its large sub-genres compilation.
+			<br /><br />
+			<p>
+			<img src="images/vampire.jpg" alt="vampire" title="vampire"/>
+			</p>
+			<h3>Classic Monsters and Mythological Monsters</h3>
+			This sub-genre regroups the monster films that have either been inspired by early roman (e.g. Frankenstein in 1818 or The Invisible Man in 1897),<br />
+			or by well-known myths and legend such as BigFoot or the Bogeyman. We can also throw in it the monsters from the fantastic world (Trolls, Dragons, etc) and those who<br />
+			became really famous in the 30’s suc0h as The Mummy or The Creature from the Black Lagoon, since they now became a part of the modern mythological bestiary
+			
+			<ul id="list">
+			<li>Frankenstein(1931)</li>
+			<li>The Mummy(1932)</li>
+			<li>Leprechaun(1993)</li>
+			<li>Troll Hunter(2010)</li>
+			</ul>
+			
+			<br />
+			<section>
+			<article id="sci">
+			<h3>Sci-Fi Monsters and Aliens</h3>
+			
+			The monster genre has always been trying to justify the presence of its horrible monsters: nuclear reasons, scientific experiments, evolved species, etc.<br />
+			This sub-genre regroups these films whose solid <br />
+			science-fiction plots make them often closer to sci-fi than to the rest of the mediocre scenario monster films
+			<ul>
+			<li>King Kong(1933)</li>
+			<li>Godzilla(1954)</li>
+			<li>Attack of the 50 feet woman(1958)</li>
+			<li>Cloverfield</li>
+			</ul>
+			</article>
+			<div id="were">
+			<h3>Werewolf</h3>
+			Werewolves are human who, after being infected by a lycanthropic virus or curse, can transform into big wolf-like beasts. The transformation can be<br />
+			self-decided or, as in most movies, occurring unwillingly during the full-moon. Werewolf films are often quite dramatic, since the werewolf<br />
+			curse is often seen as a tragedy. One of the highlight of these film is the great human-werewolf transformation scenes that they often features.
+			  
+			  <ul>
+			  <li>An American Werewolf in London(1981)</li>
+			  <li>The Howling(1979)</li>
+			  <li>Dog Soldiers(2002)</li>
+			   </ul>
+			  
+			 
+			  </div>
+	
+			  <div id="vamp">
+			  <h3>Vampire</h3>
+			  
+			  Vampires are mythical creatures that seem to have always existed in various folklores. However, the vampire concept as we know it really took off <br />
+			  with “Dracula”, the 1897’s novel from Bram Stoker. Vampires in horror films are invariably undead creatures thirsty for blood and vulnerable to sunlight. Additional rules then differs slightly depending on the movie: contagious when biting,<br />
+			  allergic to garlic, sensitive to crosses or holy water, killed by a stake in the heart, cannot enter without being invited, etc
+			
+			
+			<ul>
+			<li>Nosferatu(1922)</li>
+			<li>Dracula(1931&1922)</li>
+			<li>Fright Night(1985)</li>
+			<li>30 days of Night(2007)</li>
+			</ul>
+			</div>
+			<div>
+			Trailer to 30 Days Of Night(2007)<br />
+			<video controls width="500" height="350" >
+			<source src="videos/30days.mp4" type="video/mp4">
+			</video>
+			</div>
+			</section>
+			
+			</div>
+			
+			<div id ="zombie">
+			
+			<h2>ZOMBIE/VIRUS</h2>
+			
+			<h3>Zombie</h3>
+			<p>
+			<img src="images/zombie.jpg" alt="zombie" title="zombie" height="250px"/>
+			</p>
+			Classic zombies are typically seen rising out of their tombs, or as the results of someone being bitten by another zombie. In any case, they are dead, or more precisely undead. <br />
+			They are usually slow (although they tend to run in modern movies, resulting in increased tension), stupid and numerous. This sub-genre appeared quite early,<br />
+			with White Zombie (1932) being considered as the first zombie film. They then become hugely famous thanks to the work of Georges A. Romero and its “Trilogy of the Dead”
+			
+			<ul>
+			<li>Nights of The Living Dead(1968)</li>
+			<li>Let Sleeping Corpses Lie(1974)</li>
+			<li>Dawn Of The Dead(1978)</li>
+			<li>Zombie(1979)</li>
+			</ul>	
+
+             <video controls>
+              <source src="videos/dawn.mp4" type="video/mp4">
+             </video>
+              <br />			 
+		      The trailer to Dawn Of The Dead(1978)
+			  <br />
+            </div>
+			
+			<div id="para">
+			<a name="para">
+			<h2>PARANORMAL</h2>
+			<p>
+			<img src="images/paranormal.jpg" alt="paranormal" title="paranormal"/>
+			</p>
+			The paranormal and the fear of the unknown is naturally a classic topic of horror. Gathering everything from ghost to demons<br />
+			and even witches, it is usually the part of horror cinema that gets the scariest
+			
+			<h3>Ghosts and Spirits</h3>
+			<section id="ghost">
+			Ghosts, specters, or spirits need no introduction for they exist since forever. In horror cinema, they usually are the soul <br />
+			of dead people which, for whatever reason <br />
+			(unfinished business and revenge are the most common reasons) does not go to the hereafter but stay on earth, haunting people
+			
+			<ul>
+			<li>Poltergeist(1982)</li>
+			<li>The Frighteners(1996)</li>
+			<li>Ju-on(2002)</li>
+			<li>Mama(2013)</li>
+			</ul>
+			</section>
+			</div>
+			<div class="form">
+	<form action="" name="f" onsubmit="return Validate();" oninput="x.value=parseInt(a.value)" id="myform" autocomplete="on">
+	<fieldset>
+	<legend>Choose Your Favorite Genres and Movies </legend>
+	<table>
+	<tr>
+	<th colspan="2"><label>Subgenres of Horror</label></th>
+	</tr>
+	<tr><td>
+	<input type="checkbox" name="genre" id="g" value="Slasher"/>Slasher</td></tr>
+	<tr><td>
+	    <input type="checkbox" name="genre" id="g" value="Monster"/>Monster</td></tr>
+    <tr><td><input type="checkbox" name="genre" id="g" value="Zombie"/>Zombie</td>
+        <tr><td><input type="checkbox" name="genre" id="g" value="Psychological"/>Psychological</td></tr>
+    <tr><td><input type="checkbox" name="genre" id="g" value="Gore/Splatter"/>Gore/Splatter</td></tr>	
+	<tr><td></td></tr>
+	<tr><td></td></tr>
+	<tr><td>Choose Your Favorite Movie: </td><td>
+	<input type="text" id="txt" list="movies" name="movies">
+	<datalist id="movies">
+	<option value="Saw">
+	<option value="Martyrs">
+	<option value="Hostel">
+	<option value="Ispit on your grave">
+	<option value="The Last House on The Left">
+	<option value="Blood Feast">
+	<option value="Cannibal Holocaust">
+	<option value="Scream">
+	<option value="Nightmare On Elm Street">
+	<option value="The Texas Chain Saw Massacre">
+	</datalist></td></tr>
+	<tr><td></td></tr>
+	<tr><td>
+	<tr><td>Rate This Movie</td>
+	<td><br>
+  <input type="range" name="as" id="a" min="0" max="100" value="0"> 
+  <output name="x" >0</output><span>%</span>
+</td></tr>
+	<tr><td></td></tr>
+	<tr><td><input  class="submit-button" type="submit" name="submit" value="Submit"/>
+	</td><td><input class="submit-button" type="reset" name="reset" value="Reset"/></td></tr>
+	
+	</table>
+	
+	</fieldset>
+	</form>
+ 
+	</div>
+
+        </div>
+		
+		
+		<footer id="footer">
+		<address>
+		&copy; &#8482; <br> By <a href="mailto:willsherifi@gmail.com">Labinot Sherifi.</a><br />
+		Prishtina <br />
+		Kosovo<br />
+		</address>
+		</footer>
+		
+		
+		<script>
+		 
+		 
+		 function Sub(s){
+		 this.s=s;
+		 }
+		 
+		 Sub.prototype.show=function(){
+		 
+		 alert("You Have Entered  " + this.s  +  " Section ");
+		 };
+		 
+		 var sl=new Sub("Slasher");
+		 
+		 document.getElementById("slasher").onclick = function(){sl.show();}
+		 
+		 var mons = new Sub("Monster");
+		 
+		 document.getElementById("Monsters").onclick=function(){mons.show();}
+		 
+		 var z = new Sub("Zombie");
+		 
+		 document.getElementById("zombie").onclick=function(){z.show();}
+		 
+		 var p = new Sub("Paranormal");
+		 
+		 document.getElementById("para").onclick=function(){p.show();}
+         
+		 </script>
+		  
+
+</body>
+
+</html>
